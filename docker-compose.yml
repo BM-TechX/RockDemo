@@ -1,0 +1,26 @@
+version: '3'
+services:
+  jupyter:
+    build: 
+      context: .
+      dockerfile: ./docker/jupyter/Dockerfile
+    volumes:
+      - C:\Users\leh\source\repos\privatedata1\work:/home/jovyan/
+    ports:
+      - 8888:8888
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    container_name: jupyter_notebook
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+  jupyter22:
+    build: 
+      context: .
+      dockerfile: ./docker/LEHCUSTOM/Dockerfile
+    volumes:
+      - c:/Users/leh/source/reppos/privatedata2:/home/jovyan/
+    ports:
+      - 9999:8888
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    container_name: LEHCUSTOM
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
