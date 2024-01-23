@@ -17,4 +17,3 @@ services:
     ports:
       - 2222:22
     container_name: LEHCUSTOM
-    command: "ubuntu-ssh"
