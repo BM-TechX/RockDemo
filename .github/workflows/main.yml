@@ -15,4 +15,4 @@ jobs:
 
     - name: Deploy Docker Compose
       run: |
-        docker-compose -f $GITHUB_WORKSPACE/docker-compose.yml up -d
+        docker-compose -f C:\_work\RockDemo\RockDemo\docker-compose.yml up -d
