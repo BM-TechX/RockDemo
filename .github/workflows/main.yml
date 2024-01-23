@@ -12,7 +12,10 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
+    
+    - name: Deploy Docker Build
+      run: |
+        docker-compose -f C:\_work\RockDemo\RockDemo\docker-compose.yml build
     - name: Deploy Docker Compose
       run: |
         docker-compose -f C:\_work\RockDemo\RockDemo\docker-compose.yml up -d
