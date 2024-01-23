@@ -16,4 +16,6 @@ services:
       dockerfile: ./docker/LEHCUSTOM/Dockerfile
     ports:
       - 2222:22
+    volumes:
+      - C:\mateuz\:/home/work
     container_name: LEHCUSTOM
