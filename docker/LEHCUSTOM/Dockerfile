@@ -9,6 +9,9 @@ RUN mkdir /var/run/sshd
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 ubuntu
 RUN  echo 'ubuntu:ubuntu' | chpasswd
 
+RUN apt-get update -y
+RUN apt-get install nano -y
+
 # SSH configuration
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
